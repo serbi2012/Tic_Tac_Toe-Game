@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "SuncheonB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GangwonEduPowerExtraBoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "adobaonlyR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/adobaonlyR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SuncheonB";
+
+  ---cell-size: 17vmin;
+  ---cell-gap: 1.5vmin;
+}
+
+#main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(51, 51, 51);
+  transition: all 0.5s ease-in-out;
+}
+
+#game-board {
+  display: grid;
+  background-color: #333;
+  border-radius: var(---cell-gap);
+  grid-template-columns: repeat(3, var(---cell-size));
+  grid-template-rows: repeat(3, var(---cell-size));
+  gap: var(---cell-gap);
+  transition: all 0.5s ease-in-out;
+}
+
+#result-container {
+  width: 54vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2vmin;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 53vmin;
+}
+
+.modal-title {
+  font-size: 7vmin;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.win-modal {
+  font-size: 5vmin;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.setting-body {
+  height: 50vmin;
+  font-size: 4vmin;
+  padding: 5vmin;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.setting-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-select {
+  width: 20vmin;
+}
+
+.title {
+  color: #ddd;
+  font-size: 10.5vmin;
+}
+
+.btn-light {
+  width: 5vmin;
+  height: 5vmin;
+  border-radius: var(---cell-gap);
+  background-color: #ddd;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-symbols-rounded {
+  font-size: 3vmin;
+  color: #333;
+}
+
+.whoTurn {
+  width: 40vmin;
+  height: 5vmin;
+  background-color: #ddd;
+  border-radius: var(---cell-gap);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5vmin;
+  font-size: 2.5vmin;
+  transition: all 0.5s ease-in-out;
+}
+
+.cell {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18.5vmin;
+  background-color: #777;
+  border-radius: var(---cell-gap);
+  color: #ddd;
+  font-size: var(---cell-size);
+  transition: all 0.1s ease-in;
+  font-family: "adobaonlyR";
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: rgb(88, 88, 88);
+}
+
+.cell-click {
+  font-size: 20vmin;
+}
+
+.score {
+  width: 20vmin;
+  height: 5vmin;
+  background-color: #ddd;
+  border-radius: var(---cell-gap);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5vmin;
+  font-size: 2.5vmin;
+  transition: all 0.5s ease-in-out;
+}
+
+.winColor {
+  background-color: rgb(115, 187, 115);
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box {
+  width: 10vmin;
+  height: 11vmin;
+  background-color: #ddd;
+  margin-right: 1vmin;
+  border-radius: var(---cell-gap);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2vmin;
+}
+
+.form-select {
+  width: 14vmin;
+}
